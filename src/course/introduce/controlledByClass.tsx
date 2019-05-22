@@ -30,13 +30,11 @@ export default class Counter extends Component<Props, State> {
 
   render() {
     const { count } = this.state;
-    return (
-      <>
-        <div>{count}</div>
-        <button onClick={() => this.onClickHandler(count + 1)}>
-          点击+1
-        </button>
-      </>
-    );
+    return [
+      <div key="a">{count}</div>,
+      <button key="b" onClick={() => this.onClickHandler(count + 1)}>
+        点击+1
+      </button>
+    ]
   }
 }

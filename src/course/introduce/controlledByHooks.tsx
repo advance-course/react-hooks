@@ -12,12 +12,10 @@ export default function Counter({ value, onChange }: Props) {
     value && setCount(value);
   }, [value]);
 
-  return (
-    <>
-      <div>{count}</div>
-      <button onClick={() => onChange(count + 1)}>
-        点击+1
-      </button>
-    </>
-  )
-}  
+  return [
+    <div key="a">{count}</div>,
+    <button key="b" onClick={() => onChange(count + 1)}>
+      点击+1
+    </button>
+  ]
+}
