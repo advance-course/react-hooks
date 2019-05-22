@@ -12,17 +12,12 @@ export default function Counter({ value, onChange }: Props) {
     value && setCount(value);
   }, [value]);
 
-  function onClickHandler(count: number) {
-    setCount(count);
-    onChange && onChange(count);
-  }
-
   return (
     <>
       <div>{count}</div>
-      <button onClick={() => onClickHandler(count + 1)}>
+      <button onClick={() => onChange(count + 1)}>
         点击+1
       </button>
     </>
   )
-} 
+}  
