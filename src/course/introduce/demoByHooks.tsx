@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 
 export default function Counter() {
-  const [count, setCount] = useState(0);
+  const [counter, setCounter] = useState(0);
 
-  return (
-    <>
-      <div>{count}</div>
-      <button onClick={() => setCount(count + 1)}>
-        点击+1
-      </button>
-    </>
-  )
+  return [
+    <div key="a">{counter}</div>,
+    <button key="b" onClick={() => setCounter(counter + 1)}>
+      点击+1
+    </button>
+  ]
 }
