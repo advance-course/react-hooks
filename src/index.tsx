@@ -5,7 +5,8 @@ import './index.css';
 // import App from './course/introduce/demoByHooks'; 简单对比demo
 // import App from './course/introduce'; 对比受控组件
 // import App from './course/useState/Rectangle';  useState demo
-import App from './course/useEffect/demo01';
+// import App from './course/useEffect/demo01';
+import App from './course/useEffect/demo02';
 
 
 import * as serviceWorker from './serviceWorker';
