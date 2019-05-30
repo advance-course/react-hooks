@@ -8,13 +8,12 @@ export default function AnimateDemo() {
   const element = useRef<any>();
 
   useEffect(() => {
-    anime01 && !anime02 && animate01();
-    anime02 && !anime01 && animate02();
+    anime01 && animate01();
+  }, [anime01]);
 
-    return () => {
-      console.log('xxx');
-    }
-  }, [anime01, anime02]);
+  useEffect(() => {
+    anime02 && animate02();
+  }, [anime02]);
 
   function animate01() {
     if (element) {

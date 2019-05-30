@@ -6,10 +6,18 @@ export default function AnimateDemo() {
 
   // DOM渲染完成之后副作用执行
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setCounter(counter + 1);
     }, 300);
+    console.log('effect:', timer);
+
+    return () => {
+      console.log('clear:', timer);
+      clearTimeout(timer);
+    }
   });
+
+  console.log('before render');
 
   return (
     <div className="container">
