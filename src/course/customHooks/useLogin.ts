@@ -14,7 +14,7 @@ export default function useLogin() {
     setLoginInfo(JSON.parse(_loginInfo));
   }
 
-  /** 如果没有拿到登陆信息，则跳转至登陆页面 */
+  /** 如果没有拿到登陆信息，则跳转至登陆页面，或者利用缓存的账号密码信息自动重新登录，获得loginInfo */
   window.location.href = '/user/login';
 
   return loginInfo;
