@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import anime from 'animejs';
 import './style.scss';
 
@@ -7,15 +7,7 @@ export default function AnimateDemo() {
   const [anime02, setAnime02] = useState(false);
   const element = useRef<any>();
 
-  useEffect(() => {
-    anime01 && animate01();
-  }, [anime01]);
-
-  useEffect(() => {
-    anime02 && animate02();
-  }, [anime02]);
-
-  function animate01() {
+  const animate01 = useCallback(() => {
     if (element) {
       anime({
         targets: element.current,
@@ -27,9 +19,9 @@ export default function AnimateDemo() {
         }
       })
     }
-  }
+  }, []);
 
-  function animate02() {
+  const animate02 = useCallback(() => {
     if (element) {
       anime({
         targets: element.current,
@@ -42,12 +34,20 @@ export default function AnimateDemo() {
         }
       })
     }
-  }
+  }, []);
 
-  function clickHandler() {
+  useEffect(() => {
+    anime01 && animate01();
+  }, [anime01]);
+
+  useEffect(() => {
+    anime02 && animate02();
+  }, [anime02]);
+
+  const clickHandler = useCallback(() => {
     setAnime01(true);
     setTimeout(setAnime02.bind(null, true), 500);
-  }
+  }, []);
 
   return (
     <div className="container" onClick={clickHandler}>
