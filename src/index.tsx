@@ -9,7 +9,8 @@ import './index.css';
 // import App from './course/useEffect/demo02';
 // import App from './course/useEffect/demo03';
 // import App from './course/customHooks/app';
-import App from './course/useContext';
+// import App from './course/useContext';
+import App from './course/useReducer';
 
 import * as serviceWorker from './serviceWorker';
 
