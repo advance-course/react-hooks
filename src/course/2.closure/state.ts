@@ -1,12 +1,12 @@
-let state = null;
+let state: any = null;
 
 export const useState = (value: number) => {
   state = state || value;
 
-  function dispatch(newValue) {
+  function dispatch(newValue: any) {
     state = newValue;
     // 假设此方法能触发页面渲染
-    render();
+    // render();
   }
 
   return [state, dispatch];
