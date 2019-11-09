@@ -11,7 +11,13 @@ import './index.css';
 // import App from './course/customHooks/app';
 // import App from './course/useContext';
 // import App from './course/useReducer';
-import App from './course/useContextWithReducer';
+// import App from './course/useContextWithReducer';
+
+// 比较两个数组是否相等
+// import App from './course/customHooks/EqualArrPlus';
+
+// 获取知乎日报最新列表
+import App from './course/customHooks/ZhihuFeed';
 
 import * as serviceWorker from './serviceWorker';
 

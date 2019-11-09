@@ -1,0 +1,25 @@
+.queal_arr_container {
+  margin: 20px auto;
+  width: 320px;
+
+  .inner {
+    width: 130px;
+  }
+
+  .middle {
+    flex: 1;
+    height: 100px;
+    font-size: 20px;
+    color: red;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
+  .item {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
