@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-interface Base {
+interface Story {
   id?: number,
   ga_prefix?: string,
   hint?: string,
@@ -8,20 +8,14 @@ interface Base {
   title?: string,
   type?: number,
   url?: string,
-}
-
-export interface Story extends Base {
   images?: string[]
-}
-
-export interface TopStory extends Base {
   image?: string
 }
 
 export interface Feed {
   date: string,
   stories: Story[],
-  top_stories: TopStory[]
+  top_stories: Story[]
 }
 
 export function zhLastFeedApi(): Promise<Feed> {
