@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useState } from 'react';
 import { Button } from 'antd-mobile';
 
 const initialState: number = 0;
@@ -20,6 +20,18 @@ export default function Counter() {
       <Button onClick={() => dispatch('increment')}>递增</Button>
       <Button onClick={() => dispatch('decrement')}>递减</Button>
       <Button onClick={() => dispatch('reset')}>重置</Button>
+    </div>
+  );
+}
+
+export function Counter1() {
+  const [counter, setCounter] = useState(10);
+  return (
+    <div>
+      <div>{counter}</div>
+      <Button onClick={() => setCounter(counter - 1)}>increment</Button>
+      <Button onClick={() => setCounter(counter + 1)}>cecrement</Button>
+      <Button onClick={() => setCounter(1)}>reset</Button>
     </div>
   );
 }
