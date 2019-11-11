@@ -19,3 +19,5 @@ export default function useLogin() {
 
   return loginInfo;
 }
+
+// 如果是小程序，需要处理的前置逻辑就非常多。

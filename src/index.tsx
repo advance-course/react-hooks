@@ -17,7 +17,10 @@ import './index.css';
 // import App from './course/customHooks/EqualArrPlus';
 
 // 获取知乎日报最新列表
-import App from './course/customHooks/ZhihuFeed2';
+// import App from './course/customHooks/ZhihuFeed2';
+
+// 获取鼠标位置
+import App from './course/customHooks/MousePos';
 
 import * as serviceWorker from './serviceWorker';
 
