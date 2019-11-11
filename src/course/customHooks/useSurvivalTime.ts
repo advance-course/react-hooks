@@ -6,14 +6,14 @@ import { useState, useEffect } from 'react';
  */
 export default function useSurvivalTime() {
   const [startTime] = useState(new Date().getTime());
-  const [disTime, setDistime] = useState(0);
 
   useEffect(() => {
     return () => {
       const curTime = new Date().getTime();
-      setDistime(curTime - startTime);
+
+      // 计算得到时差，通常的处理是调用埋点接口，将时差数据保存在服务端
+      const disTime = curTime - startTime;
+      // api(disTime); 调用埋点接口
     }
   }, []);
-
-  return disTime;
 }
