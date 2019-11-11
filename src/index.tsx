@@ -17,7 +17,7 @@ import './index.css';
 // import App from './course/customHooks/EqualArrPlus';
 
 // 获取知乎日报最新列表
-import App from './course/customHooks/ZhihuFeed';
+import App from './course/customHooks/ZhihuFeed2';
 
 import * as serviceWorker from './serviceWorker';
 
