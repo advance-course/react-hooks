@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-interface Props {
-  name: string,
-  age: number
-}
+function Demo() {
+  const [counter, setCounter] = useState(0);
+  const [pen, setPen] = useState(true);
 
-function Demo({ name, age }: Props) {
-  return [
-    <div>name: {name}</div>,
-    <div>age: {age}</div>
-  ]
+  useEffect(() => {
+    if (pen) {
+      setCounter(counter + 1);
+      setCounter(counter + 1);
+      setCounter(counter + 1);
+      setPen(false);
+    }
+  }, [pen]);
+
+  console.log(counter, pen);   // 点击之后仅执行一次，合成事件中，，即使是多个不同的State，也会进行合并
+
+  return (
+    <div onClick={() => setPen(true)}>click me!</div>
+  )
 }
 
 export default Demo;

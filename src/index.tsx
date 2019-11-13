@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+
+import App from './course/useState/Demo';
 // import App from './course/introduce/demoByClass'; 简单对比demo
 // import App from './course/introduce/demoByHooks'; 简单对比demo
 // import App from './course/introduce'; 对比受控组件
@@ -20,7 +22,7 @@ import './index.css';
 // import App from './course/customHooks/ZhihuFeed2';
 
 // 获取鼠标位置
-import App from './course/customHooks/MousePos';
+// import App from './course/customHooks/MousePos';
 
 import * as serviceWorker from './serviceWorker';
 
