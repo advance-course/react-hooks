@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-import App from './course/useState/Demo';
+// import App from './course/useState/Demo';
 // import App from './course/introduce/demoByClass'; 简单对比demo
 // import App from './course/introduce/demoByHooks'; 简单对比demo
 // import App from './course/introduce'; 对比受控组件
@@ -13,6 +13,7 @@ import App from './course/useState/Demo';
 // import App from './course/customHooks/app';
 // import App from './course/useContext';
 // import App from './course/useReducer';
+import App from './course/useReducer/Counter';
 // import App from './course/useContextWithReducer';
 
 // 比较两个数组是否相等
