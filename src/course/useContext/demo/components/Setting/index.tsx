@@ -6,8 +6,6 @@ import './index.scss';
 export default function Setting() {
   const {unreadIndex, unreadHot, setUnreadIndex, setUnreadHot} = useContext(ctx);
 
-  function onChange1() {}
-
   return (
     <div className="setting_container">
       <div className="title">基本设置</div>
@@ -17,7 +15,7 @@ export default function Setting() {
             showNumber
             min={0}
             value={unreadIndex}
-            onChange={(value) => setUnreadIndex(value)}
+            onChange={setUnreadIndex}
           />}
         >
           首页未读
@@ -27,7 +25,7 @@ export default function Setting() {
             showNumber
             min={0}
             value={unreadHot}
-            onChange={(value) => setUnreadHot(value)}
+            onChange={setUnreadHot}
           />}
         >
           热门未读
