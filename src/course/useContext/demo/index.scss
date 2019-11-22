@@ -1,0 +1,13 @@
+.use_context_container {
+  max-width: 475px;
+  width: 100%;
+  margin: 0 auto;
+
+  .tab_wrapper {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid orange;
+  }
+}
