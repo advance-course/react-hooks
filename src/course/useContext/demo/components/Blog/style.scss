@@ -1,0 +1,37 @@
+.feed_container {
+  width: 375px;
+  height: 400px;
+  margin: 0 auto;
+
+  &.loading {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.blog_container {
+  padding: 0 15px;
+
+  title {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+  }
+
+  id {
+    display: block;
+  }
+
+  updated {
+    display: block;
+  }
+
+  entry {
+    display: block;
+    margin-top: 10px;
+  }
+}

@@ -2,6 +2,8 @@ import React, {useContext} from 'react';
 import {ctx, Provider} from './context';
 import {Badge} from 'antd-mobile';
 import ZhihuFeed from './components/ZhihuFeed';
+import Blog from './components/Blog';
+import Setting from './components/Setting';
 import './index.scss';
 
 function App() {
@@ -17,15 +19,22 @@ function App() {
           <div onClick={() => setTabindex(1)}>热门</div>
         </Badge>
         
+        <div onClick={() => setTabindex(2)}>设置</div>
       </div>
 
-      {tabIndex === 0 && (
-        <ZhihuFeed />
-      )}
+      <div className="content_wrapper">
+        {tabIndex === 0 && (
+          <ZhihuFeed />
+        )}
 
-      {tabIndex === 1 && (
-        <div>热门</div>
-      )}
+        {tabIndex === 1 && (
+          <Blog />
+        )}
+
+        {tabIndex === 2 && (
+          <Setting />
+        )}
+      </div>
     </div>
   )
 }

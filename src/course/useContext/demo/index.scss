@@ -1,7 +1,18 @@
+html, body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
 .use_context_container {
+  height: 100%;
   max-width: 475px;
   width: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 
   .tab_wrapper {
     height: 50px;
@@ -10,4 +21,9 @@
     align-items: center;
     border-bottom: 1px solid orange;
   }
+
+  .content_wrapper {
+    flex: 1;
+    overflow: auto;
+  } 
 }
