@@ -11,7 +11,7 @@ export default function Setting() {
       <div className="title">基本设置</div>
       <List>
         <List.Item wrap extra={
-          <Stepper 
+          <Stepper
             showNumber
             min={0}
             value={unreadIndex}

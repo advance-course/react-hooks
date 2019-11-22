@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import {zhLastFeedApi, Feed} from './api';
 import { ActivityIndicator, Carousel } from 'antd-mobile';
+import {ctx} from '../../context';
 import './style.scss';
 
 // 执行如下指令，禁用chrome跨域限制
@@ -8,11 +9,13 @@ import './style.scss';
 
 export default function ZhihuFeed() {
   const [feed, setFeed] = useState<Feed>();
+  const {setUnreadIndex} = useContext(ctx);
 
   useEffect(() => {
+    setUnreadIndex(0);
     zhLastFeedApi().then(res => {
       setFeed(res);
-    })
+    });
   }, []);
 
   if (!feed) {
