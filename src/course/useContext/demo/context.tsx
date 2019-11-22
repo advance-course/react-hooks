@@ -3,10 +3,10 @@ import React, { createContext, useState, Dispatch, ReactNode } from 'react';
 interface Injected {
   tabIndex: number,
   setTabindex: Dispatch<any>,
-  counter: number,
-  setCounter: Dispatch<any>,
-  increment: () => any,
-  decrement: () => any
+  unreadIndex: number,
+  setUnreadIndex: Dispatch<any>,
+  unreadHot: number,
+  setUnreadHot: Dispatch<any>,
 }
 
 export const ctx = createContext<Injected>({} as Injected);
@@ -17,15 +17,16 @@ interface Props {
 
 export function Provider({children}: Props) {
   const [tabIndex, setTabindex] = useState(0);
-  const [counter, setCounter] = useState(0);
+  const [unreadIndex, setUnreadIndex] = useState(0);
+  const [unreadHot, setUnreadHot] = useState(0);
 
   const value = {
-    tabIndex, 
+    tabIndex,
     setTabindex,
-    counter,
-    setCounter,
-    increment: () => setCounter(counter + 1),
-    decrement: () => setCounter(counter - 1)
+    unreadIndex,
+    setUnreadIndex,
+    unreadHot,
+    setUnreadHot,
   }
 
   return (
