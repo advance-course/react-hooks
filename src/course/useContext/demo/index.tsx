@@ -1,13 +1,15 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {ctx, Provider} from './context';
 import {Badge} from 'antd-mobile';
-import ZhihuFeed from './components/ZhihuFeed';
-import Blog from './components/Blog';
+import Home from './components/Home';
+import Hot from './components/Hot';
 import Setting from './components/Setting';
 import './index.scss';
 
 function App() {
-  const {tabIndex, setTabindex, unreadIndex, unreadHot} = useContext(ctx);
+  const {unreadIndex, unreadHot} = useContext(ctx);
+  const [tabIndex, setTabindex] = useState(0);
+  
   return (
     <div className="use_context_container">
       <div className="tab_wrapper">
@@ -24,11 +26,11 @@ function App() {
 
       <div className="content_wrapper">
         {tabIndex === 0 && (
-          <ZhihuFeed />
+          <Home />
         )}
 
         {tabIndex === 1 && (
-          <Blog />
+          <Hot />
         )}
 
         {tabIndex === 2 && (

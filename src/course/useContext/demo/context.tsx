@@ -1,8 +1,6 @@
 import React, { createContext, useState, Dispatch, ReactNode } from 'react';
 
 interface Injected {
-  tabIndex: number,
-  setTabindex: Dispatch<any>,
   unreadIndex: number,
   setUnreadIndex: Dispatch<any>,
   unreadHot: number,
@@ -16,13 +14,10 @@ interface Props {
 }
 
 export function Provider({children}: Props) {
-  const [tabIndex, setTabindex] = useState(0);
   const [unreadIndex, setUnreadIndex] = useState(0);
   const [unreadHot, setUnreadHot] = useState(0);
 
   const value = {
-    tabIndex,
-    setTabindex,
     unreadIndex,
     setUnreadIndex,
     unreadHot,
